@@ -1,0 +1,53 @@
+import React from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css"; // Font Awesome for social icons
+
+const SocialMediaSection = () => {
+  const brands = [
+    {
+      image: "/follow1.webp",
+      title: "Italon",
+      subtitle: "Modern Bathroom",
+    },
+    {
+      image: "/follow2.webp",
+      title: "QUEO",
+      subtitle: "Your personal OASIS awaits",
+    },
+    {
+      image: "/follow3.webp",
+      title: "QUEO",
+      subtitle: "AMBER VINTAGE CHARM",
+    },
+    {
+      image: "/follow4.webp",
+      title: "Italon",
+      subtitle: "Timeless QUARTZ COLLECTION",
+    },
+  ];
+
+  return (
+    <section className="social-section">
+      <h2>Follow us on Social Media</h2>
+      <div className="brand-grid">
+        {brands.map((brand, index) => (
+          <div className="brand-card" key={index}>
+            <img src={brand.image} alt={brand.subtitle} className="brand-image" />
+            <div className="brand-overlay">
+              <h4>{brand.title}</h4>
+              <p>{brand.subtitle}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="social-icons-colored">
+  <a href="#"><i className="fab fa-facebook-f facebook" /></a>
+  <a href="#"><i className="fab fa-instagram instagram" /></a>
+  <a href="#"><i className="fab fa-x-twitter twitter" /></a>
+  <a href="#"><i className="fab fa-youtube youtube" /></a>
+  <a href="#"><i className="fab fa-whatsapp whatsapp" /></a>
+</div>
+    </section>
+  );
+};
+
+export default SocialMediaSection;
