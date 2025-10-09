@@ -7,7 +7,7 @@ const NewArrival = () => {
       {/* 🔹 Background Image */}
       <div className="background-media">
         <img
-          src="/New.webp"
+          src="/new.webp"
           alt="Luxury Bathroom"
           className="background-image"
         />
