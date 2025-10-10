@@ -5,7 +5,7 @@ const Hero = () => {
   const mediaItems = [
     {
       type: "video",
-      src: "/Videos/hind1video.mp4",
+      src: "/Videos/frontvideo.mp4",
       poster: "/Images/hind1poster.webp", // fallback poster
     },
     {
