@@ -1,0 +1,70 @@
+/* 🔹 Navbar Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(50deg, #fdf6ec, #ffffff); /* 🔥 warm beige to white */
+  backdrop-filter: blur(12px); /* cinematic blur */
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* subtle depth */
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+/* 🔹 Navbar Scroll Effect */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* soft white */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #d4af37; /* gold tone */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-brand {
+  color: #1a1a1a;
+}
+
+.navbar .navbar-brand:hover {
+  color: #d4af37;
+  transform: scale(1.05);
+}
+.nav-link {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 6px;
+  background-color: white; /* 🔹 subtle contrast box */
+  border: 1px solid rgb(236, 223, 223);            /* 🔹 gold border */
+  border-radius: 8px;
+  color: #333 !important;               /* 🔹 dark text for visibility */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.nav-link:hover {
+  background-color: #d4af37; /* gold fill on hover */
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav-link.active {
+  background-color: #d4af37;
+  color: #000 !important;
+  border-color: #d4af37;
+}
+/* 🔹 Nav Links on Scrolled Navbar */
+.navbar.scrolled .nav-link {
+  color: #333; /* readable on white bg */
+  background-color: transparent;
+}
+

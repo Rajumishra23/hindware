@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
-
+import "./Hero.css";
 const Hero = () => {
   const mediaItems = [
     { type: "video", src: "/Videos/hind1video.mp4", thumb: "/thumbs/hind1.jpg" },
     { type: "image", src: "/hind.webp", thumb: "/thumbs/hind2.jpg" },
-    { type: "video", src: "/Videos/hind3video.mp4", thumb: "/thumbs/hind3.jpg" },
-    { type: "video", src: "/Videos/hind2video.mp4", thumb: "/thumbs/hind4.jpg" },
+   
+   
   ];
 
   const carouselRef = useRef(null);
@@ -70,34 +70,23 @@ const Hero = () => {
                 />
               )}
 
-              <div className="carousel-caption d-flex flex-column justify-content-start align-items-start text-start">
-                <h1 className="display-5 fw-bold mb-8">
-                  Redefining <span className="text-danger">Luxury Living</span>
-                </h1>
-                <p className="lead mb-3">
-                  Premium bathware, kitchen, and wellness experiences.
-                </p>
-                <a href="#" className="btn btn-danger btn-lg px-4">
-                  Explore Collection
-                </a>
-              </div>
+             <div className="carousel-caption d-flex flex-column justify-content-center align-items-start text-start" style={{ top: '30%', left: '10%' }}>
+  <h1 className="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">
+    Redefining <span className="text-danger">Luxury Living</span>
+  </h1>
+  <p className="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+    Premium bathware, kitchen, and wellness experiences.
+  </p>
+  <a href="#" className="btn btn-danger btn-lg px-5 animate__animated animate__fadeInUp animate__delay-2s" style={{ boxShadow: '0 8px 20px rgba(212, 175, 55, 0.4)' }}>
+    Explore Collection
+  </a>
+</div>
+
             </div>
           ))}
         </div>
       </div>
 
-      {/* 🔹 Custom Indicators */}
-      <div className="custom-indicators mt-3 d-flex justify-content-center gap-3">
-        {mediaItems.map((item, index) => (
-          <div
-            key={index}
-            className={`indicator-thumb ${activeIndex === index ? "active" : ""}`}
-            onClick={() => goToSlide(index)}
-          >
-            <img src={item.thumb} alt={`Slide ${index + 1}`} />
-          </div>
-        ))}
-      </div>
     </section>
   );
 };

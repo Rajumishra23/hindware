@@ -12,6 +12,7 @@ import BlogSection from './components/BlogSection'
 import SocialMediaSection from './components/SocialMediaSection'
 import Footer from './components/footer'
 
+
 const App = () => {
   return (
     <div>

@@ -1,11 +1,11 @@
 import React from "react";
-
+import "./Header.css"; // ✅ import the CSS fix
 
 const Header = () => {
   return (
     <>
       {/* 🔹 Top Info Bar */}
-      <div className="bg-light border-bottom py-2 small">
+      <div className="topbar bg-light border-bottom py-2 small">
         <div className="container d-flex justify-content-between align-items-center">
           <div>
             <i className="fa-solid fa-phone text-danger me-2"></i>
@@ -26,10 +26,11 @@ const Header = () => {
       </div>
 
       {/* 🔹 Main Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top">
+     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm main-navbar">
+
         <div className="container">
           <a className="navbar-brand" href="/">
-            <h1>Hindware</h1>
+            <h1 className="m-0 fw-bold text-dark">HINDWARE</h1>
           </a>
 
           {/* Mobile Toggle */}
@@ -65,23 +66,24 @@ const Header = () => {
             </ul>
 
             {/* Search + Cart */}
-           <div className="search-cart-group">
-  <div className="input-group">
-    <input
-      type="text"
-      className="form-control"
-      placeholder="Search products..."
-    />
-    <button className="btn">
-      <i className="fa fa-search"></i>
-    </button>
-  </div>
-  <a href="#" className="cart-icon">
-    <i className="fa fa-shopping-bag"></i>
-    <span className="badge">0</span>
-  </a>
-</div>
-
+            <div className="search-cart-group d-flex align-items-center gap-3">
+              <div className="input-group search-box">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search products..."
+                />
+                <button className="btn btn-danger">
+                  <i className="fa fa-search"></i>
+                </button>
+              </div>
+              <a href="#" className="cart-icon position-relative text-dark">
+                <i className="fa fa-shopping-bag fs-5"></i>
+                <span className="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill">
+                  0
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
