@@ -22,12 +22,13 @@
 
 .navbar-brand {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #d4af37; /* gold tone */
+  font-size: 1rem;        /* 🔽 was 2rem — now compact */
+  font-weight: 600;         /* 🔽 was 700 — softer tone */
+  letter-spacing: 0.5px;    /* 🔽 was 1px — tighter spacing */
+  color: #d4af37;
   text-transform: uppercase;
   transition: all 0.3s ease;
+   margin-left: -30px;
 }
 
 .navbar.scrolled .navbar-brand {
