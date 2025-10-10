@@ -2,8 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Hero.css";
 const Hero = () => {
   const mediaItems = [
-    { type: "video", src: "/Videos/hind1video.mp4", thumb: "/thumbs/hind1.jpg" },
-    { type: "image", src: "/hind.webp", thumb: "/thumbs/hind2.jpg" },
+    { type: "video", src: "/Videos/hind1video.mp4",  },
    
    
   ];
