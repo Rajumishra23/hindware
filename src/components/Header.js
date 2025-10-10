@@ -26,7 +26,7 @@ const Header = () => {
       </div>
 
       {/* 🔹 Main Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top">
         <div className="container">
           <a className="navbar-brand" href="/">
             <h1>Hindware</h1>
