@@ -30,7 +30,7 @@ const Header = () => {
 
         <div className="container">
           <a className="navbar-brand" href="/">
-            <h1 className="m-0 fw-bold text-dark">HINDWARE</h1>
+            <h1 className="m-0 fw-bold text-dark">Safeline plus</h1>
           </a>
 
           {/* Mobile Toggle */}

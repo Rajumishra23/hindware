@@ -6,11 +6,7 @@ const Hero = () => {
     {
       type: "video",
       src: "/Videos/hello.webm",
-      poster: "/Images/hind1poster.webp", // fallback poster
-    },
-    {
-      type: "image",
-      src: "/Images/hind.webp",
+      poster: "/Images/hind1poster.webp", 
     },
   ];
 
@@ -25,8 +21,7 @@ const Hero = () => {
 
     carouselEl.addEventListener("slid.bs.carousel", handleSlide);
     return () => carouselEl.removeEventListener("slid.bs.carousel", handleSlide);
-  }, []);
-
+  }, []);    
   const goToSlide = (index) => {
     const carousel = window.bootstrap.Carousel.getInstance(carouselRef.current);
     carousel.to(index);
