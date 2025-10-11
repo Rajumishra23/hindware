@@ -6,61 +6,63 @@ const Footer = () => {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <h4>Explore By Brands</h4>
+          <h4>Explore Kitchen Brands</h4>
           <ul>
-            <li>Queo</li>
-            <li>Hindware Italian Collection</li>
-            <li>Hindware Smart Collection</li>
-            <li>Hindware</li>
-            <li>Hindware Appliances</li>
-            <li>Benelave by Hindware</li>
+            <li>Safeline Plus</li>
+            <li>Hindware Kitchen Studio</li>
+            <li>Hindware Smart Appliances</li>
+            <li>Italon Surfaces</li>
+            <li>QUEO Luxe Kitchens</li>
+            <li>Benelave Modular Systems</li>
           </ul>
         </div>
 
         <div>
-          <h4>Explore By Categories</h4>
+          <h4>Explore Kitchen Categories</h4>
           <ul>
-            <li>Bathware</li>
-            <li>Tiles & Surfaces</li>
-            <li>Kitchen Appliances</li>
+            <li>Built-in Appliances</li>
+            <li>Smart Chimneys</li>
+            <li>Cooktops & Hobs</li>
+            <li>Water Heaters</li>
+            <li>Kitchen Accessories</li>
           </ul>
         </div>
 
         <div>
           <h4>Explore By Space</h4>
           <ul>
-            <li>Bathroom</li>
-            <li>Kitchen</li>
+            <li>Modular Kitchen</li>
+            <li>Utility Area</li>
           </ul>
         </div>
 
         <div>
-          <h4>Business & Experience</h4>
+          <h4>Kitchen Business & Experience</h4>
           <ul>
-            <li>Institutional Business</li>
-            <li>International Business</li>
-            <li>Hindware Experience Center</li>
+            <li>Modular Kitchen Projects</li>
+            <li>Global Kitchen Reach</li>
+            <li>Kitchen Experience Center</li>
             <li>Store Locator</li>
-            <li>Explore Catalogue</li>
+            <li>Download Catalogue</li>
           </ul>
         </div>
 
         <div>
-          <h4>Customer Support</h4>
+          <h4>Kitchen Support</h4>
           <ul>
-            <li>Service & Support</li>
-            <li>Contact Us</li>
+            <li>Installation & Service</li>
+            <li>Contact Kitchen Experts</li>
             <li>Warranty & Return Policy</li>
-            <li>FAQs</li>
+            <li>Kitchen FAQs</li>
           </ul>
         </div>
 
         <div>
-          <h4>Other Links</h4>
+          <h4>More Kitchen Resources</h4>
           <ul>
-            <li>Blogs</li>
+            <li>Kitchen Blogs</li>
             <li>Certifications</li>
-            <li>Media</li>
+            <li>Media & Press</li>
             <li>Terms & Conditions</li>
           </ul>
         </div>
@@ -68,7 +70,7 @@ const Footer = () => {
 
       <div className="footer-social">
         <div>
-          <h5>Queo</h5>
+          <h5>Safeline Plus</h5>
           <div className="social-icons">
             <a href="#"><i className="fab fa-facebook-f facebook" /></a>
             <a href="#"><i className="fab fa-instagram instagram" /></a>
@@ -79,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h5>Hindware Italian Collection</h5>
+          <h5>Hindware Kitchen Studio</h5>
           <div className="social-icons">
             <a href="#"><i className="fab fa-facebook-f facebook" /></a>
             <a href="#"><i className="fab fa-instagram instagram" /></a>
@@ -102,7 +104,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© Bigdesign software Tecnologies. All Rights Reserved.</p>
+        <p>© Bigdesign Software Technologies. All Rights Reserved.</p>
       </div>
     </footer>
   );
