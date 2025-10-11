@@ -3,21 +3,21 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // 🔥 Font Awesome ico
 
 const BlogSection = () => {
   const blogs = [
-    {
-      title: "Why Wall-Mounted Rain Shower Heads Are the Perfect Blend of Luxury and Function",
-      image: "/blog1.webp",
-      description: "Explore how rain shower heads elevate both design and daily comfort.",
-    },
-    {
-      title: "Towel Hooks for Bathroom: Stylish, Space-Saving, and Functional Solutions",
-      image: "/blog2.webp",
-      description: "Discover minimalist towel hook ideas that save space and add style.",
-    },
-    {
-      title: "Sensor Toilet Flush: A Smart Upgrade for Modern Bathrooms",
-      image: "/blog3.webp",
-      description: "Learn how touchless flush systems bring hygiene and innovation together.",
-    },
+   {
+    title: "Why Built-in Ovens Are the Perfect Blend of Elegance and Efficiency",
+    image: "/blogk1.webp",
+    description: "Explore how built-in ovens elevate kitchen design and simplify cooking routines.",
+  },
+  {
+    title: "Modular Kitchen Handles: Sleek, Space-Saving, and Functional",
+    image: "/blogk2.webp",
+    description: "Discover handle designs that blend minimalism with ergonomic comfort.",
+  },
+  {
+    title: "Smart Chimneys: A Modern Upgrade for Cleaner, Smarter Kitchens",
+    image: "/blogk3.webp",
+    description: "Learn how auto-clean chimneys enhance hygiene and reduce maintenance.",
+  },
   ];
 
   return (
@@ -63,7 +63,7 @@ const BlogSection = () => {
 
         <div className="support-card">
           <i className="fas fa-mobile-alt" />
-          <h4>Download Hardware Service App</h4>
+          <h4>Download Kitchen Service App</h4>
           <a href="#">Download Now</a>
         </div>
       </div>

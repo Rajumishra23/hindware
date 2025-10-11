@@ -1,79 +1,5 @@
 
-.bathroom-feature {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
 
-.background-media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6); /* 🔹 Slight dark for readability */
-}
-
-
-/* 🔹 Centered Overlay Content */
-.overlay-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.text-box {
-  max-width: 700px;
-  color: #fff;
-  padding: 0 1rem;
-}
-
-.text-box h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  line-height: 1.3;
-  margin-bottom: 1.5rem;
-}
-
-.text-box p {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: #f1f1f1;
-  margin-bottom: 2rem;
-}
-
-.text-box .btn {
-  font-size: 1.1rem;
-  padding: 0.85rem 2.2rem;
-  border-radius: 50px;
-  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.3);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.text-box .btn:hover {
-  background-color: #b71c1c;
-  transform: translateY(-3px);
-}
-.bathroom-feature {
-  margin-top: 1rem; /* 🔹 Adds vertical gap from previous section */
-}
-@media (max-width: 768px) {
-  .bathroom-feature {
-    margin-top: 2rem;
-  }
-}
 .kitchen-feature {
   position: relative;
   width: 100%;
@@ -151,428 +77,7 @@
   text-align: center;
   padding-bottom: 8vh; /* 🔹 Controls vertical position */
 }
-.bathroom-feature .overlay-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: flex-end; /* 🔽 Push content to bottom */
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 8vh; /* 🔹 Controls how low the text sits */
-}
-.product-category-section {
-  background: linear-gradient(to bottom right, #f3f4f6, #ffffff);
-  padding: 4rem 0;
-  text-align: center;
-  margin-top: 1rem; /* 🔹 spacing from previous section */
-}
 
-.product-category-section h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.product-category-section h2 span {
-  color: #d32f2f;
-}
-
-.product-category-section p {
-  font-size: 1.2rem;
-  color: #6c757d;
-  margin-bottom: 3rem;
-}
-
-.slider-wrapper {
-  position: relative;
-  height: 400px;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.slide-image {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  opacity: 0;
-  transition: all 0.8s ease;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide-image.active {
-  left: 0;
-  opacity: 1;
-}
-
-.slide-image img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  transition: transform 0.5s ease;
-}
-
-.image-label {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 1.5rem;
-}
-
-.slider-dots .dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #ccc;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.slider-dots .dot.active {
-  background: yellow;
-}
-.product-category-section {
-  background: linear-gradient(to bottom right, #f3f4f6, #ffffff);
-  padding: 4rem 0;
-  text-align: center;
-}
-.bathroom-feature {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  color: #fff;
-}
-
-.background-media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.background-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
-  transition: transform 5s ease-in-out;
-}
-
-/* 🔹 Bathroom Feature Section */
-.bathroom-feature {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.bathroom-feature img.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
-  transition: transform 5s ease-in-out;
-}
-
-.bathroom-feature:hover img.background-image {
-  transform: scale(1.1);
-}
-
-/* 🔹 Overlay for slight dark tint */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.25); /* halki dark tint */
-  z-index: 2;
-}
-
-/* 🔹 Overlay Content (Text + Button) */
-.overlay-content {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  padding-left: 5%;
-}
-
-.text-box {
-  max-width: 600px;
-  animation: fadeInUp 1.5s ease forwards;
-}
-
-.title {
-  font-size: 3rem;
-  line-height: 1.2;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.title .text-danger {
-  color: #d32f2f; /* Hindware red */
-}
-
-.description {
-  color: #f1f1f1;
-  font-size: 1.25rem;
-  line-height: 1.7;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-
-.view-btn {
-  border-radius: 30px;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-/* 🔹 Fade In Up Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 🔹 Responsive */
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
-
-  .overlay-content {
-    justify-content: center;
-    padding-left: 0;
-    text-align: center;
-  }
-}
-
-.smart-video-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.video-overlay {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 2rem;
-  margin-top: 25rem; /* 🔥 Push text lower */
-}
-
-.video-overlay h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.video-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: #f0f0f0;
-}
-
-.video-overlay button {
-  background: #d32f2f;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.video-overlay button:hover {
-  background: #b71c1c;
-}
-
-.sustainable-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.background-media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.65); /* Optional: darken image for better text contrast */
-}
-
-.sustainable-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  padding: 0 2rem;
-  margin-top: 20rem;;
-}
-
-.sustainable-content h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.sustainable-content button {
-  background: #2e7d32;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.sustainable-content button:hover {
-  background: #1b5e20;
-}
-
-.store-locator-section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.store-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.store-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.6); /* Optional: darken for contrast */
-}
-
-.store-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  padding: 0 2rem;
-  margin-top: 20rem; /* 🔥 Push text lower */
-}
-
-.store-content h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.store-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #f0f0f0;
-}
-
-.store-content button {
-  background: #d32f2f;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.store-content button:hover {
-  background: #b71c1c;
-}
 .blog-section {
   padding: 4rem 2rem;
   background-color: #f9f9f9;
@@ -854,4 +359,251 @@
   font-size: 0.9rem;
   color: #666;
 }
+.category-section {
+  background: linear-gradient(to bottom, #fdfdfd, #f3f3f3); /* soft gradient */
+  padding: 4rem 0;
+}
 
+.category-section h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Category Card */
+.category-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Bigger Image */
+.category-img {
+  height: 250px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  mix-blend-mode: multiply;
+}
+
+/* Label */
+.category-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .category-img {
+    height: 120px;
+  }
+
+  .category-card h5 {
+    font-size: 1rem;
+  }
+}
+/* Section Wrapper */
+.comfort-showcase {
+  background-color: #f8f9fa;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Heading */
+.comfort-showcase h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+/* Subheading */
+.comfort-showcase p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CTA Button */
+.comfort-showcase .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Image Grid */
+.comfort-showcase .comfort-img {
+  width: 100%;
+  max-width: 320px;       /* ✅ Wider image */
+  height: 240px;           /* ✅ Taller image */
+  object-fit: cover;       /* fills box with cropping */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+/* Hover Effect */
+.comfort-showcase .comfort-img:hover {
+  transform: scale(1.05);
+}
+
+/* Category Title */
+.comfort-showcase h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .comfort-showcase h2 {
+    font-size: 1.8rem;
+  }
+
+  .comfort-showcase .comfort-img {
+    max-width: 110%;
+    height: 200px;
+  }
+
+  .comfort-showcase h6 {
+    font-size: 0.95rem;
+  }
+}
+
+/* smart kichen section */
+.smart-kitchen {
+  background-color: #fdfdfd;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.smart-kitchen h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.smart-kitchen p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.smart-kitchen .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.smart-img {
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.smart-img:hover {
+  transform: scale(1.05);
+}
+
+.smart-kitchen h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .smart-kitchen h2 {
+    font-size: 1.8rem;
+  }
+
+  .smart-img {
+    max-width: 110%;
+    height: 180px;
+  }
+
+  .smart-kitchen h6 {
+    font-size: 0.95rem;
+  }
+}
+
+/* kitchen accessories */
+
+.kitchen-accessories {
+  background-color: #f3f4f6;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.kitchen-accessories h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.kitchen-accessories p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.kitchen-accessories .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.accessory-img {
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.accessory-img:hover {
+  transform: scale(1.05);
+}
+
+.kitchen-accessories h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .kitchen-accessories h2 {
+    font-size: 1.8rem;
+  }
+
+  .accessory-img {
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .kitchen-accessories h6 {
+    font-size: 0.95rem;
+  }
+}

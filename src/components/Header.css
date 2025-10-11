@@ -4,68 +4,124 @@
   top: 0;
   width: 100%;
   z-index: 999;
-  background: linear-gradient(50deg, #fdf6ec, #ffffff); /* 🔥 warm beige to white */
-  backdrop-filter: blur(12px); /* cinematic blur */
+  background: linear-gradient(50deg, #fdf6ec, #ffffff);
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* subtle depth */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: background 0.4s ease, box-shadow 0.4s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
 }
-/* 🔹 Navbar Scroll Effect */
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95); /* soft white */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
+/* 🔹 Logo Text */
 .navbar-brand {
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;        /* 🔽 was 2rem — now compact */
-  font-weight: 600;         /* 🔽 was 700 — softer tone */
-  letter-spacing: 0.5px;    /* 🔽 was 1px — tighter spacing */
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
   color: #d4af37;
   text-transform: uppercase;
   transition: all 0.3s ease;
-   margin-left: -30px;
-}
-
-.navbar.scrolled .navbar-brand {
-  color: #1a1a1a;
+  margin-left: -40px; /* more left */
 }
 
 .navbar .navbar-brand:hover {
   color: #d4af37;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
-.nav-link {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 0 6px;
-  background-color: white; /* 🔹 subtle contrast box */
-  border: 1px solid rgb(236, 223, 223);            /* 🔹 gold border */
-  border-radius: 8px;
-  color: #333 !important;               /* 🔹 dark text for visibility */
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.nav-link:hover {
-  background-color: #d4af37; /* gold fill on hover */
-  color: #000 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+/* 🔹 Navbar Nav Container */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;        /* ✅ keep all in one line */
+  gap: 10px;                /* even spacing between links */
+  white-space: nowrap;      /* ✅ prevent text wrapping */
+  overflow-x: auto;         /* ✅ if too many, horizontal scroll (mobile safe) */
 }
 
-.nav-link.active {
+/* 🔹 Nav Links */
+.nav-link {
+  display: flex;            /* ✅ centers text vertically */
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  background-color: white;
+  border: 1px solid rgb(236, 223, 223);
+  border-radius: 8px;
+  color: #333 !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  height: 42px;             /* ✅ same height for all links */
+  line-height: 1;           /* ✅ keep text vertically centered */
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
   background-color: #d4af37;
   color: #000 !important;
-  border-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-/* 🔹 Nav Links on Scrolled Navbar */
-.navbar.scrolled .nav-link {
-  color: #333; /* readable on white bg */
-  background-color: transparent;
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between input and button */
 }
 
+.search-input {
+  padding: 10px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.search-button {
+  background-color: #f4c10f; /* yellow tone */
+  border: none;
+  padding: 15px 20px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button i {
+  color: #000;
+  font-size: 1rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 320px; /* 🔽 Increase this as needed */
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 8px 12px;
+}
+/* 🔹 Placeholder Styling */
+.form-control::placeholder {
+  font-style: normal;               /* 🔽 remove italic if not needed */
+  font-weight: 600;                 /* 🔽 bold placeholder */
+  font-family: 'Poppins', sans-serif; /* 🔽 custom font family */
+  color: #888;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+/* 🔹 Responsive */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-wrap: wrap;        /* ✅ allow wrapping on small screens */
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: 45%;             /* ✅ two per row on mobile */
+    margin-bottom: 8px;
+  }
+}

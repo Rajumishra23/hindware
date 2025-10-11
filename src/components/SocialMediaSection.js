@@ -3,26 +3,22 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Font Awesome for soci
 
 const SocialMediaSection = () => {
   const brands = [
-    {
-      image: "/follow1.webp",
-      title: "Italon",
-      subtitle: "Modern Bathroom",
-    },
-    {
-      image: "/follow2.webp",
-      title: "QUEO",
-      subtitle: "Your personal OASIS awaits",
-    },
-    {
-      image: "/follow3.webp",
-      title: "QUEO",
-      subtitle: "AMBER VINTAGE CHARM",
-    },
-    {
-      image: "/follow4.webp",
-      title: "Italon",
-      subtitle: "Timeless QUARTZ COLLECTION",
-    },
+  {
+    image: "/kichen1.webp",
+    title: "Italon Kitchens",
+    subtitle: "Modern Surfaces for Culinary Spaces",
+  },
+  {
+    image: "/kichen2.webp",
+    title: "QUEO Kitchen Studio",
+    subtitle: "Your Gourmet Oasis Awaits",
+  },
+  {
+    image: "/kichen3.webp",
+    title: "QUEO Luxe Kitchens",
+    subtitle: "Amber Finishes with Vintage Charm",
+  },
+
   ];
 
   return (

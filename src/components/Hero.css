@@ -1,19 +1,72 @@
-.hero-section {
-  margin-top: 100px; /* fixes overlap under fixed navbar */
+/* Hero Section Wrapper */
+.hero-carousel {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero-video,
 .hero-image {
-  height: 100vh;
+  height: 95vh;
   object-fit: cover;
+  object-position: center;
 }
+
+/* Carousel Caption Styling */
 .carousel-caption {
   position: absolute;
-  top: 45%;       /* 🔼 Previously 20%, now much higher */
-  left: 10%;
-  z-index: 2;
   max-width: 600px;
-  text-align: left;
+  color: #fff;
+  z-index: 5;
+}
+.caption-box {
+  background: rgba(0, 0, 0, 0.25); /* very light dark overlay */
+  color: #fff;
+  padding: 1.5rem;
+  max-width: 600px;
+  border-left: 3px solid rgba(255, 255, 255, 0.3); /* subtle accent */
+  backdrop-filter: blur(1px); /* soft glassy feel */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* soft glow */
+}
+
+.caption-box h1,
+.caption-box p,
+.caption-box a {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); /* soft glow */
+}
+.carousel-caption h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 20%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Optional: Smooth Fade Between Slides */
+.carousel-item {
+  transition: opacity 0.8s ease-in-out;
 }

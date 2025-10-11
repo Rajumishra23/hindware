@@ -4,10 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { BrowserRouter } from 'react-router-dom'; // ✅ Import BrowserRouter
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>     {/* ✅ Wrap your App inside BrowserRouter */}
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
+
 reportWebVitals();

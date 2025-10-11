@@ -1,16 +1,18 @@
 import React from 'react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
-import BathroomFeature from './components/BathroomFeature'
 import KitchenFeature from './components/KichenFeature'
-import ProductImage from './components/ProductImage'
-import NewArrival from './components/NewArrival'
-import SmartProductSection from './components/SmartproductSection'
-import SustainableSection from './components/SustainableSection'
-import StoreLocatorSection from './components/StoreLocatorSection'
+
+
 import BlogSection from './components/BlogSection'
 import SocialMediaSection from './components/SocialMediaSection'
 import Footer from './components/footer'
+import CategoryList from './components/CategoryList'
+import BannerSection from './components/BannerSection'
+import ComfortBannerSection from './components/ComfortBannerSection'
+import Banner from './components/Banner'
+import SmartKitchenSection from './components/SmartKichenSection'
+import KitchenAccessoriesSection from './components/KitchenAccessoriesSection'
 
 
 const App = () => {
@@ -18,13 +20,13 @@ const App = () => {
     <div>
       <Header />
       <HeroSection />
-      <BathroomFeature />
       <KitchenFeature/>
-      <ProductImage/>
-      <NewArrival/>
-      <SmartProductSection/>
-      <SustainableSection/>
-      <StoreLocatorSection/>
+      <CategoryList/>
+      <BannerSection/>
+      <ComfortBannerSection/>
+      <Banner/>
+      <SmartKitchenSection/>
+      <KitchenAccessoriesSection/>
       <BlogSection/>
       <SocialMediaSection/>
       <hr></hr>
