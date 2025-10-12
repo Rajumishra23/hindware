@@ -31,7 +31,7 @@ body {
 .logo-img {
   max-height: 52px;         /* ✅ Slightly bigger */
   height: auto;
-  transform: scale(4.5);    /* ✅ Visually larger */
+  transform: scale(5.5);    /* ✅ Visually larger */
   transform-origin: center;
   transition: all 0.3s ease;
   display: block;
@@ -94,14 +94,19 @@ body {
 }
 
 /* 🔹 Nav Icons */
-.navbar-right .nav-icon {
-  font-size: 1.2rem;       /* ✅ Thoda chhota */
-  transform: scale(0.95);  /* ✅ Slightly thinner feel */
+.navbar-right i.nav-icon {
+  font-size: 1.1rem;         /* ✅ Smaller size */
+  transform: scale(0.95);    /* ✅ Slightly thinner feel */
   position: relative;
-  top: -1px;               /* ✅ Aligns with logo and menu */
+  top: -1px;                 /* ✅ Aligns with logo and menu */
+  color: white !important;   /* ✅ Always white */
 }
-.navbar-right .nav-icon {
+
+.navbar-right a {
   color: white !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .navbar.scrolled .nav-icon {
