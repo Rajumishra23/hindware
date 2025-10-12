@@ -94,12 +94,14 @@ body {
 }
 
 /* 🔹 Nav Icons */
-.nav-icon {
-  font-size: 1.6rem;
-  color: white;
-  background: none;
-  border: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+.navbar-right .nav-icon {
+  font-size: 1.2rem;       /* ✅ Thoda chhota */
+  transform: scale(0.95);  /* ✅ Slightly thinner feel */
+  position: relative;
+  top: -1px;               /* ✅ Aligns with logo and menu */
+}
+.navbar-right .nav-icon {
+  color: white !important;
 }
 
 .navbar.scrolled .nav-icon {
