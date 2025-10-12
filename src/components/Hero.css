@@ -1,41 +1,51 @@
-/* Hero Section Wrapper */
+/* 🔹 Hero Section Wrapper */
 .hero-carousel {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
+/* 🔹 Hero Image — Fullscreen Everywhere */
 .hero-image {
-  height: 95vh;
+  height: 100vh;
+  height: 100dvh; /* ✅ Dynamic viewport height for mobile */
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
-/* Carousel Caption Styling */
+/* 🔹 Caption Container */
 .carousel-caption {
   position: absolute;
-  max-width: 600px;
-  color: #fff;
+  top: 30%;
+  left: 10%;
+  right: 10%;
   z-index: 5;
-}
-.caption-box {
-  background: rgba(0, 0, 0, 0.25); /* very light dark overlay */
-  color: #fff;
-  padding: 1.5rem;
-  max-width: 600px;
-  border-left: 3px solid rgba(255, 255, 255, 0.3); /* subtle accent */
-  backdrop-filter: blur(1px); /* soft glassy feel */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* soft glow */
+  text-align: center;
 }
 
-.caption-box h1,
+/* 🔹 Caption Box Styling */
+.caption-box {
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  padding: 1.5rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* 🔹 Text Glow */
 .caption-box p,
 .caption-box a {
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); /* soft glow */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
+
+/* 🔹 Typography */
 .carousel-caption h1 {
   font-size: 3rem;
   line-height: 1.2;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption p {
@@ -43,13 +53,40 @@
   line-height: 1.6;
 }
 
+/* 🔹 CTA Button */
+.btn-lg {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  background: white;
+  color: black;
+}
 
-/* Responsive Adjustments */
+/* 🔹 Smooth Fade Between Slides */
+.carousel-item {
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* 🔹 Tablet & Mobile */
 @media (max-width: 768px) {
+  .hero-image {
+    height: 100dvh;
+  }
+
   .carousel-caption {
-    top: 20%;
+    top: 25%;
     left: 5%;
+    right: 5%;
     max-width: 90%;
+  }
+
+  .caption-box {
+    padding: 1rem;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: none;
+    border-left: none;
   }
 
   .carousel-caption h1 {
@@ -58,6 +95,7 @@
 
   .carousel-caption p {
     font-size: 1rem;
+    line-height: 1.5;
   }
 
   .btn-lg {
@@ -66,7 +104,27 @@
   }
 }
 
-/* Optional: Smooth Fade Between Slides */
-.carousel-item {
-  transition: opacity 0.8s ease-in-out;
+/* 🔹 Small Mobile */
+@media (max-width: 480px) {
+  .hero-image {
+    height: 100dvh;
+  }
+
+  .caption-box {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* 🔹 Stability Fix */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
 }

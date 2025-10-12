@@ -4,24 +4,29 @@ import "./Hero.css";
 const Hero = () => {
   const mediaItems = [
     {
-      type: "image",
-      src: "/blogk1.webp",
-      heading: "Upgrade Your Kitchen",
-      subtext: "Discover smart, modern appliances for your home.",
+      type: "video",
+      src: "Videos/frontvideo.webm",
+      heading: "Experience Luxury",
+      subtext: "Cinematic kitchen moments in motion.",
     },
-    { 
-      type: "image",
-      src: "/blogk2.webp",
-      heading: "Cook with Confidence",
-      subtext: "Gas stoves that blend power and precision.",
+    {
+      type: "video",
+      src: "Videos/smart.webm",
+      heading: "Precision in Motion",
+      subtext: "Gas stoves and chimneys in action.",
     },
     {
       type: "image",
-      src: "/blogk3.webp",
-      heading: "Breathe Easy",
-      subtext: "Chimneys that clear the air with style.",
+      src: "/hero.webp",
+      heading: "Upgrade Your Kitchen",
+      subtext: "Discover smart, modern appliances for your home.",
     },
-   
+    {
+      type: "image",
+      src: "/hero1.webp",
+      heading: "Cook with Confidence",
+      subtext: "Gas stoves that blend power and precision.",
+    },
   ];
 
   const carouselRef = useRef(null);
@@ -32,7 +37,7 @@ const Hero = () => {
     if (!carouselEl || !window.bootstrap) return;
 
     const carousel = new window.bootstrap.Carousel(carouselEl, {
-      interval: 4000,
+      interval: 5000,
       ride: "carousel",
       pause: false,
       wrap: true,
@@ -52,18 +57,13 @@ const Hero = () => {
     };
   }, []);
 
-  const goToSlide = (index) => {
-    const carousel = window.bootstrap.Carousel.getInstance(carouselRef.current);
-    carousel.to(index);
-  };
-
   return (
     <section className="hero-carousel">
       <div
         id="heroCarousel"
         className="carousel slide"
         data-bs-ride="carousel"
-        data-bs-interval="4000"
+        data-bs-interval="5000"
         ref={carouselRef}
       >
         <div className="carousel-inner">
@@ -72,54 +72,31 @@ const Hero = () => {
               key={index}
               className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
-              <img
-                src={item.src}
-                alt={`Slide ${index + 1}`}
-                className="d-block w-100 hero-image"
-              />
+              {item.type === "video" ? (
+                <video
+                  src={item.src}
+                  className="d-block w-100 hero-media"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={item.src}
+                  alt={`Slide ${index + 1}`}
+                  className="d-block w-100 hero-media"
+                />
+              )}
+
               <div
                 className="carousel-caption d-flex flex-column justify-content-center align-items-start text-start"
                 style={{ top: "30%", left: "10%" }}
               >
-                <div className="caption-box p-4 rounded">
-                  <h1 className="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">
-                    {item.heading}
-                  </h1>
-                  <p className="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
-                    {item.subtext}
-                  </p>
-                  <a
-                    href="#"
-                    className="btn btn-danger btn-lg px-5 animate__animated animate__fadeInUp animate__delay-2s"
-                   
-                  >
-                    Explore Appliances
-                  </a>
-                </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Carousel controls */}
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
   );
