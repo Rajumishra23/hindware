@@ -44,15 +44,16 @@ const Header = () => {
         <div className="container-fluid d-flex justify-content-between align-items-center">
           {/* 🔹 Left: Hamburger */}
           <div className="navbar-left">
-            <button className="menu-btn" onClick={() => setMenuOpen(true)}>
-              <i className="fas fa-bars"></i>
-            </button>
+           <button className="menu-btn" onClick={() => setMenuOpen(true)}>
+  <i className="fas fa-bars"></i>
+  <span className="menu-text">Menu</span>
+</button>
           </div>
 
           {/* 🔹 Center: Logo */}
           <div className="navbar-center">
             <a className="navbar-brand" href="/">
-              <img src="/logo.png" alt="Safeline Plus" className="logo-img" />
+              <img src="/whitelogo.png" alt="Safeline Plus" className="logo-img" />
             </a>
           </div>
 
@@ -72,41 +73,40 @@ const Header = () => {
       </nav>
 
       {/* 🔹 Slide-In Menu */}
-     {menuOpen && (
+    {menuOpen && (
   <div className="mobile-menu-overlay" onClick={() => setMenuOpen(false)}>
     <div className="mobile-menu" onClick={(e) => e.stopPropagation()}>
-      <button className="close-btn" onClick={() => setMenuOpen(false)}>✕</button>
+     <button className="close-btn" onClick={() => setMenuOpen(false)}>
+  ✕ <span className="close-text">Close</span>
+</button>
 
+      {/* 🔹 Explore by Category */}
       <div className="menu-section">
-        <h3>Kitchen Appliances</h3>
+        <h3>Explore by Category</h3>
         <ul>
-          <li>Chimneys</li>
-          <li>Built-in Hobs</li>
-          <li>Gas Cooktops</li>
-          <li>Induction Cooktops</li>
-          <li>Built-in Microwave Ovens</li>
-          <li>Built-in Ovens</li>
-          <li>Dishwashers</li>
-          <li>Refrigerators</li>
-          <li>Water Purifiers</li>
+          <li>SS Body Cooktops</li>
+          <li>Glass Series Cooktops</li>
+          <li>Premium Series Cooktops</li>
+          <li>Electric Irons</li>
           <li>Electric Kettles</li>
           <li>Mixer Grinders</li>
-          <li>Kitchen Sinks</li>
-          <li>Touchless Faucets</li>
-          <li>Kitchen Essentials</li>
+          <li>Hot Plates (G-Coil)</li>
+          <li>Immersion Rods</li>
         </ul>
       </div>
 
+      {/* 🔹 Explore by Feature */}
       <div className="menu-section">
-        <h3>Smart Kitchen</h3>
+        <h3>Explore by Feature</h3>
         <ul>
-          <li>Voice-Controlled Chimneys</li>
-          <li>IoT-Enabled Faucets</li>
-          <li>Auto-Clean Hobs</li>
-          <li>Sensor-Based Water Purifiers</li>
+          <li>Auto Ignition Burners</li>
+          <li>Digital Glass Variants</li>
+          <li>Double Dip Tray Options</li>
+          <li>Brass Nozel Add-ons</li>
         </ul>
       </div>
 
+      {/* 🔹 Support & Services */}
       <div className="menu-section">
         <h3>Support & Services</h3>
         <ul>
@@ -116,9 +116,20 @@ const Header = () => {
           <li>Live Chat</li>
         </ul>
       </div>
+
+      {/* 🔹 Diwali Edition */}
+      <div className="menu-section">
+        <h3>Diwali Edition</h3>
+        <ul>
+          <li>Best Sellers</li>
+          <li>New Launches</li>
+          <li>Limited Edition</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </div> // ✅ This was missing
 )}
+
           
         
     

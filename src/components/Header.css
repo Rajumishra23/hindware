@@ -1,4 +1,10 @@
 /* 🔹 Default Navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -23,17 +29,18 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* 🔹 Logo clarity */
 .logo-img {
   max-height: 80px;
-  transform: scale(4);
+  transform: scale(5);
   transform-origin: center;
   transition: all 0.4s ease;
-  filter: brightness(10) invert(1) drop-shadow(0 0 6px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4)); /* subtle shadow for clarity */
 }
 
-.navbar.scrolled .logo-img {
-  filter: brightness(0) invert(0); /* black logo */
+
+.navbar.light .logo-img {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2)); /* softer for white background */
+  opacity: 0.95; /* ensures visibility */
 }
 
 /* 🔹 Icon clarity */
@@ -103,12 +110,12 @@
   background: #fff;
   width: 85%;
   max-width: 400px;
-  height: 100dvh;
-  overflow-y: auto;
+  height: 100dvh; /* ✅ Dynamic viewport height */
+  overflow-y: auto; /* ✅ Enables scroll */
   padding: 2rem 1.5rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   animation: slideIn 0.4s ease forwards;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* ✅ Smooth scroll on iOS */
 }
 
 @keyframes slideIn {
@@ -116,13 +123,15 @@
   to { transform: translateX(0); }
 }
 
-/* 🔹 Menu Sections */
 .menu-section h3 {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #222;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.3rem;
+  letter-spacing: 0.5px;
 }
 
 .menu-section ul {
@@ -132,8 +141,9 @@
 }
 
 .menu-section li {
-  padding: 0.6rem 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
+  padding: 0.6rem 0;
   color: #555;
   border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
@@ -144,7 +154,6 @@
   color: #000;
 }
 
-/* 🔹 Close Button */
 .close-btn {
   position: absolute;
   top: 1rem;
@@ -154,4 +163,33 @@
   font-size: 1.5rem;
   color: #333;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.close-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.6rem;
+  color: white;
+  background: none;
+  border: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar.scrolled .menu-btn {
+  color: #000;
+}
+
+.menu-text {
+  font-size: 1rem;
+  font-weight: 500;
 }
