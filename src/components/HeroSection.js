@@ -15,12 +15,7 @@ const Hero = () => {
       heading: "Precision in Motion",
       subtext: "Gas stoves and chimneys in action.",
     },
-    {
-      type: "image",
-      src: "/hero.webp",
-      heading: "Upgrade Your Kitchen",
-      subtext: "Discover smart, modern appliances for your home.",
-    },
+    
     {
       type: "image",
       src: "/hero1.webp",

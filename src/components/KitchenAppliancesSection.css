@@ -1,0 +1,84 @@
+.kitchen-section {
+  background: #fafafa;
+}
+
+.appliance-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.appliance-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.appliance-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.appliance-card:hover .overlay {
+  opacity: 1;
+}
+
+.big-image {
+  height: 100%;
+  min-height: 500px;
+}
+
+.small-image {
+  height: 300px;
+}
+.kitchen-section {
+  background: linear-gradient(135deg, #fffaf4 0%, #f9f9f9 100%);
+  padding: 80px 0;
+  position: relative;
+}
+.kitchen-section h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 50px;
+  position: center;
+  display: inline-block;
+}
+.kitchen-section h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #ff914d;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+.appliance-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appliance-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}

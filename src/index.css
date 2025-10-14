@@ -1,82 +1,5 @@
 
 
-.kitchen-feature {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  margin-top: 1rem; /* 🔹 spacing from previous section */
-}
-
-.kitchen-feature .background-media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.kitchen-feature .background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-}
-
-/* 🔹 Overlay Text */
-.kitchen-feature .overlay-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.kitchen-feature .text-box {
-  max-width: 700px;
-  color: #fff;
-  padding: 0 1rem;
-}
-
-.kitchen-feature .text-box h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  line-height: 1.3;
-  margin-bottom: 1.5rem;
-}
-
-.kitchen-feature .text-box p {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: #f1f1f1;
-  margin-bottom: 2rem;
-}
-
-.kitchen-feature .btn {
-  font-size: 1.1rem;
-  padding: 0.85rem 2.2rem;
-  border-radius: 50px;
-  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.3);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.kitchen-feature .btn:hover {
-  background-color: #b71c1c;
-  transform: translateY(-3px);
-}
-.kitchen-feature .overlay-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: flex-end; /* 🔽 Push content to bottom */
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 8vh; /* 🔹 Controls vertical position */
-}
 
 .blog-section {
   padding: 4rem 2rem;
@@ -359,129 +282,9 @@
   font-size: 0.9rem;
   color: #666;
 }
-.category-section {
-  background: linear-gradient(to bottom, #fdfdfd, #f3f3f3); /* soft gradient */
-  padding: 4rem 0;
-}
 
-.category-section h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #212529;
-  margin-bottom: 3rem;
-  text-align: center;
-}
 
-/* Category Card */
-.category-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  text-align: center;
-  transition: transform 0.3s ease;
-  height: 100%;
-}
 
-.category-card:hover {
-  transform: translateY(-6px);
-}
-
-/* Bigger Image */
-.category-img {
-  height: 250px;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: 1rem;
-  mix-blend-mode: multiply;
-}
-
-/* Label */
-.category-card h5 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0;
-}
-
-/* Responsive Grid */
-@media (max-width: 768px) {
-  .category-img {
-    height: 120px;
-  }
-
-  .category-card h5 {
-    font-size: 1rem;
-  }
-}
-/* Section Wrapper */
-.comfort-showcase {
-  background-color: #f8f9fa;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-/* Heading */
-.comfort-showcase h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #212529;
-}
-
-/* Subheading */
-.comfort-showcase p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* CTA Button */
-.comfort-showcase .btn {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-/* Image Grid */
-.comfort-showcase .comfort-img {
-  width: 100%;
-  max-width: 320px;       /* ✅ Wider image */
-  height: 240px;           /* ✅ Taller image */
-  object-fit: cover;       /* fills box with cropping */
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  margin: 0 auto;
-}
-
-/* Hover Effect */
-.comfort-showcase .comfort-img:hover {
-  transform: scale(1.05);
-}
-
-/* Category Title */
-.comfort-showcase h6 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  margin-top: 0.5rem;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .comfort-showcase h2 {
-    font-size: 1.8rem;
-  }
-
-  .comfort-showcase .comfort-img {
-    max-width: 110%;
-    height: 200px;
-  }
-
-  .comfort-showcase h6 {
-    font-size: 0.95rem;
-  }
-}
 
 /* smart kichen section */
 .smart-kitchen {
@@ -606,6 +409,7 @@
   .kitchen-accessories h6 {
     font-size: 0.95rem;
   }
+  
 }
 
 html, body {
@@ -613,4 +417,60 @@ html, body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
+}
+.comfort-showcase {
+  background: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.comfort-showcase h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.comfort-showcase p {
+  max-width: 750px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+/* 🔹 Image styling */
+.comfort-img {
+  width: 230px; /* बड़ा size */
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+  margin: 0 12px; /* 👈 प्रत्येक image के बीच gap */
+}
+
+.comfort-img:hover {
+  transform: scale(1.08);
+}
+
+/* 🔹 Responsive adjustments */
+@media (max-width: 992px) {
+  .comfort-img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comfort-img {
+    width: 160px;
+    height: 160px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .comfort-img {
+    width: 130px;
+    height: 130px;
+    margin: 6px;
+  }
 }

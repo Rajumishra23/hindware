@@ -127,13 +127,8 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  </div> // ✅ This was missing
-)}
-
-          
-        
-    
-    </>
+  </div> 
+)} </>
   );
 };
 
