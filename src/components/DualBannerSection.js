@@ -1,31 +1,26 @@
 import React from "react";
-import "./DualBannerSection.css";
 
 const DualBannerSection = () => {
   return (
-    <section className="dual-banner-section py-5">
-      <div className="container">
-        <div className="row g-4 align-items-stretch">
-          {/* Left Banner */}
-          <div className="col-md-6">
-            <div className="banner-box red-theme h-100">
-              <img
-                src="/bannerleft.webp"
-                alt="Mixer Grinder"
-                className="img-fluid rounded w-100"
-              />
-            </div>
+    <section className="py-10 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* 🔴 Left Banner */}
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="/bannerleft.webp"
+              alt="Mixer Grinder"
+              className="w-full h-100 md:h-56 lg:h-64 object-cover"
+            />
           </div>
 
-          {/* Right Banner */}
-          <div className="col-md-6">
-            <div className="banner-box yellow-theme h-100">
-              <img
-                src="/bannerright.webp"
-                alt="Juicer"
-                className="img-fluid rounded w-100"
-              />
-            </div>
+          {/* 🟡 Right Banner */}
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="/bannerright.webp"
+              alt="Juicer"
+              className="w-full h-100 md:h-56 lg:h-64 object-cover"
+            />
           </div>
         </div>
       </div>

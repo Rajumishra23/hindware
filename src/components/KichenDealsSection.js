@@ -1,5 +1,4 @@
 import React from "react";
-import "./KitchenDealsSection.css";
 
 const kitchenDeals = [
   {
@@ -42,36 +41,52 @@ const kitchenDeals = [
 
 const KitchenDealsSection = () => {
   return (
-    <section className="kitchen-deals-section py-5">
-      <div className="container">
-        <h2 className="text-center fw-bold mb-4">Hot Kitchen Deals</h2>
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">
+          Hot Kitchen Deals
+        </h2>
 
-        <div className="row g-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {kitchenDeals.map((item) => (
-            <div className="col-12 col-sm-6 col-md-3" key={item.id}>
-              <div className="deal-card">
-                <span className="deal-tag">{item.tag}</span>
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="img-fluid product-img"
-                />
-                <h6 className="product-title">{item.name}</h6>
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow-md p-4 relative hover:shadow-xl transition"
+            >
+              <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                {item.tag}
+              </span>
 
-                <div className="price-info">
-                  <p className="old-price">₹ {item.mrp.toLocaleString()}</p>
-                  <span className="discount">{item.discount}</span>
-                </div>
-                <p className="new-price">₹ {item.price.toLocaleString()}</p>
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
 
-                <ul className="offer-list">
-                  <li>5% Instant discount on EMI*</li>
-                  <li>1% Instant discount on UPI*</li>
-                  <li>No Cost EMI available*</li>
-                </ul>
+              <h6 className="font-semibold text-gray-800 text-sm mb-2">
+                {item.name}
+              </h6>
 
-                <button className="buy-btn">Buy now</button>
+              <div className="flex items-center justify-between text-sm mb-1">
+                <p className="line-through text-gray-500">₹ {item.mrp}</p>
+                <span className="text-green-600 font-medium">
+                  {item.discount}
+                </span>
               </div>
+
+              <p className="text-lg font-bold text-gray-900 mb-3">
+                ₹ {item.price}
+              </p>
+
+              <ul className="text-xs text-gray-600 mb-4 space-y-1">
+                <li>5% Instant discount on EMI*</li>
+                <li>1% Instant discount on UPI*</li>
+                <li>No Cost EMI available*</li>
+              </ul>
+
+              <button className="w-full bg-gray-900 text-white py-2 rounded-full hover:bg-gray-800 transition">
+                Buy now
+              </button>
             </div>
           ))}
         </div>

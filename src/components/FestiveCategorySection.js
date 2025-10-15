@@ -1,29 +1,31 @@
 import React from "react";
-import "./FestiveCategorySection.css";
 
 const categories = [
-  { image: "/diswasher.webp" },
-  {  image: "/electry.webp" },
-  {  image: "/chimny.webp" },
-  {  image: "/grinder.webp" },
-  {  image: "/stove.webp" },
-  {  image: "/coffy.webp" },
-  
-  
+  { image: "/diswasher.webp", label: "Dishwasher" },
+  { image: "/electry.webp", label: "Electric Kettle" },
+  { image: "/chimny.webp", label: "Chimney" },
+  { image: "/grinder.webp", label: "Grinder" },
+  { image: "/stove.webp", label: "Gas Stove" },
+  { image: "/coffy.webp", label: "Coffee Maker" },
 ];
 
 const FestiveCategorySection = () => {
   return (
-    <section className="festive-section py-5">
-      <div className="container text-center">
-        <h2 className=" fw-bold mb-4">Categories</h2>
-        <div className="row g-4 justify-content-center">
+    <section className="py-10 bg-gray-900">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold text-white mb-8">Categories</h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
           {categories.map((cat, index) => (
-            <div className="col-6 col-md-2" key={index}>
-              <div className="category-card">
-                <img src={cat.image} alt={cat.label} className="img-fluid rounded" />
-                <h6 className="mt-2 text-light fw-semibold">{cat.label}</h6>
-              </div>
+            <div key={index} className="flex flex-col items-center">
+         <img
+  src={cat.image}
+  alt={cat.label}
+  className="w-64 sm:w-72 md:w-80 lg:w-96 h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+/>
+              <h6 className="mt-2 text-white font-semibold text-sm">
+                {cat.label}
+              </h6>
             </div>
           ))}
         </div>

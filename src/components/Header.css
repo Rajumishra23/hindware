@@ -31,7 +31,7 @@ body {
 .logo-img {
   max-height: 52px;         /* ✅ Slightly bigger */
   height: auto;
-  transform: scale(5.5);    /* ✅ Visually larger */
+  transform: scale(6.5);    /* ✅ Visually larger */
   transform-origin: center;
   transition: all 0.3s ease;
   display: block;

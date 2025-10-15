@@ -14,6 +14,13 @@ import KitchenAppliancesSection from './components/KitchenAppliancesSection'
 import DualBannerSection from './components/DualBannerSection'
 import KitchenDealsSection from './components/KichenDealsSection'
 import FestiveCategorySection from './components/FestiveCategorySection'
+import BlendGrindHero from './components/BlindGrindHero'
+import ChimneyDealsSection from './components/ChimneyDeals'
+import DishwasherBannerSection from './components/DiswasherBanner'
+import DishwasherDealsSection from './components/DishwasherDeals'
+import JucierBanner from './components/JucierBanner'
+import MixerDealsSection from './components/MixerDeals'
+
 
 
 const App = () => {
@@ -22,11 +29,18 @@ const App = () => {
       <Header />
       <HeroSection />
       <KitchenAppliancesSection/>
+      <DualBannerSection/>
       <FestiveCategorySection/>
-      <BannerSection/>
+      <BlendGrindHero/>
+      <BannerSection/> 
       <KitchenDealsSection/>
       <ComfortBannerSection/>
       <Banner/>
+       <ChimneyDealsSection/>
+       <DishwasherBannerSection/>
+       <DishwasherDealsSection/>
+       <JucierBanner/>
+      <MixerDealsSection/>  
       <SmartKitchenSection/>
       <KitchenAccessoriesSection/>
       <BlogSection/>
